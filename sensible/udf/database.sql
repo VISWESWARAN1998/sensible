@@ -53,5 +53,14 @@ end$$
 
 delimiter ;
 
+create table if not exists tag
+(
+	id bigint primary key auto_increment,
+    user_id bigint,
+    name text,
+    hexcolour text
+);
+
+
 
 
