@@ -65,7 +65,9 @@ def sensible_token(_function):
             try:
                 jwt.decode(api_key, password_hash+SensibleSecret.user_secret)
             except jwt.DecodeError:
-                return 
+                return SensibleException.raise_exception(SensibleException.INVALID_TOKEN)
         finally:
             cursor.close()
             connection.close()
+        return _function(*args, **kwargs)
+    return wrapper_function
