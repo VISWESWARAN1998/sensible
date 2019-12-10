@@ -12,6 +12,8 @@ from user.login import UserLogin
 
 # Tags for user
 from tag.add_tag import add_tag_wrapper
+from tag.delete_tag import delete_tag_wrapper_function
+from tag.my_tag import MyTag
 
 app = Flask(__name__)
 api = Api(app=app)
@@ -25,6 +27,8 @@ api.add_resource(UserLogin, "/user_login")
 
 # Tags
 app.add_url_rule("/add_tag", view_func=add_tag_wrapper())
+app.add_url_rule("/delete_tag", view_func=delete_tag_wrapper_function())
+api.add_resource(MyTag, "/my_tag_list")
 
 
 if __name__ == "__main__":
