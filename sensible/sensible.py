@@ -23,6 +23,7 @@ from category.delete_category import DeleteCategory
 # Tasks related imports
 from task.add_task import AddTask
 from task.task_detail import task_detail_wrapper
+from task.my_tasks import MyTasks
 
 # Organization related imports
 from organization.add_organization import NewOrganization
@@ -50,6 +51,7 @@ api.add_resource(DeleteCategory, "/delete_category")
 # Tasks
 api.add_resource(AddTask, "/add_task")
 app.add_url_rule("/task_detail", view_func=task_detail_wrapper())
+api.add_resource(MyTasks, "/my_tasks")
 
 # Organizations
 api.add_resource(NewOrganization, "/new_organization")

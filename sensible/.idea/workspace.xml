@@ -14,10 +14,22 @@
       <file leaf-file-name="sensible.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sensible.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="54" column="52" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+            <state relative-caret-position="289">
+              <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
               <folding>
                 <element signature="e#30#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_tasks.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task/my_tasks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+              <folding>
+                <element signature="e#30#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,6 +72,7 @@
         <option value="$PROJECT_DIR$/graph_helper/alchemy_obj_to_args.py" />
         <option value="$PROJECT_DIR$/task/task_detail.py" />
         <option value="$PROJECT_DIR$/organization/add_organization.py" />
+        <option value="$PROJECT_DIR$/task/my_tasks.py" />
         <option value="$PROJECT_DIR$/sensible.py" />
       </list>
     </option>
@@ -513,10 +526,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/task/my_tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="e#30#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sensible.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="54" column="52" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+        <state relative-caret-position="289">
+          <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
           <folding>
             <element signature="e#30#53#0" expanded="true" />
           </folding>
