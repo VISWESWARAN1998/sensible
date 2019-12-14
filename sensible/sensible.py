@@ -17,6 +17,11 @@ from tag.my_tag import MyTag
 
 # Category related imports
 from category.add_category import AddCategory
+from category.my_category import MyCategory
+from category.delete_category import DeleteCategory
+
+# Tasks related imports
+from task.add_task import AddTask
 
 app = Flask(__name__)
 api = Api(app=app)
@@ -35,6 +40,11 @@ api.add_resource(MyTag, "/my_tag_list")
 
 # Categories
 api.add_resource(AddCategory, "/add_category")
+api.add_resource(MyCategory, "/my_category_list")
+api.add_resource(DeleteCategory, "/delete_category")
+
+# Tasks
+api.add_resource(AddTask, "/add_task")
 
 
 if __name__ == "__main__":

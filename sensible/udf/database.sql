@@ -32,7 +32,8 @@ create table if not exists category
 (
 	id bigint primary key auto_increment,
     customer_id bigint,
-    name text CHARACTER SET utf8 COLLATE utf8_unicode_ci
+    name text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+    hex_colour varchar(7) not null
 );
 
 delimiter $$
@@ -42,12 +43,12 @@ after insert on user_credential
 for each row
 begin
 	insert into category values
-    (null, NEW.id, "Call"),
-    (null, NEW.id, "Email"),
-    (null, NEW.id, "Follow-up"),
-    (null, NEW.id, "Meeting"),
-    (null, NEw.id, "Milestone"),
-    (null, NEW.id, "Send");
+    (null, NEW.id, "Call", "#2196f3"),
+    (null, NEW.id, "Email", "#e91e63"),
+    (null, NEW.id, "Follow-up", "#ffeb3b"),
+    (null, NEW.id, "Meeting", "#607d8b"),
+    (null, NEw.id, "Milestone", "#4caf50"),
+    (null, NEW.id, "Send", "#a7ffeb");
     
 end$$
 
@@ -57,8 +58,7 @@ create table if not exists tag
 (
 	id bigint primary key auto_increment,
     user_id bigint not null,
-    name text not null,
-    hexcolour text not null
+    name text not null
 );
 
 
@@ -70,9 +70,9 @@ create table if not exists task
     category_id bigint,
     due_date date not null,
     due_time time not null,
-    opportunity_id bigint    
+    completed_date date,
+    completed_time time,
+    opportunity_id bigint,
+    status tinyint(1) default 0 not null
 );
-
-
-
 

@@ -3,11 +3,11 @@
 import jwt
 from flask import request, jsonify
 from flask_restful import Resource
-from database.get_connection import get_connection
 from user.helper import sensible_token
+from database.get_connection import get_connection
 
 
-class MyTag(Resource):
+class MyCategory(Resource):
 
     @sensible_token
     def get(self):
@@ -16,11 +16,11 @@ class MyTag(Resource):
         try:
             connection = get_connection()
             cursor = connection.cursor()
-            cursor.execute("select id, name from tag where user_id=%s", (user_id, ))
+            cursor.execute("select id, name, hex_colour from category where customer_id=%s", (user_id, ))
             result = cursor.fetchall()
             return jsonify(
                 {
-                    "tag_list": result
+                    "category_list": result
                 }
             )
         finally:

@@ -7,22 +7,23 @@ from database.get_connection import get_connection
 from user.helper import sensible_token
 
 
-class MyTag(Resource):
+class DeleteCategory(Resource):
 
     @sensible_token
-    def get(self):
+    def post(self):
         decoded_token = jwt.decode(request.headers["x-access-token"], verify=False)
+        category_id = request.json["category_id"]
         user_id = decoded_token["user_id"]
         try:
             connection = get_connection()
             cursor = connection.cursor()
-            cursor.execute("select id, name from tag where user_id=%s", (user_id, ))
-            result = cursor.fetchall()
-            return jsonify(
-                {
-                    "tag_list": result
-                }
-            )
+            cursor.execute("delete from category where id=%s and customer_id=%s limit 1", (category_id, user_id))
+            connection.commit()
         finally:
             cursor.close()
             connection.close()
+        return jsonify(
+            {
+                "message": "categories will be deleted!"
+            }
+        )

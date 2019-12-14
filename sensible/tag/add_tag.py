@@ -10,8 +10,6 @@ from user.helper import sensible_token
 
 class TagDetail(graphene.InputObjectType):
     tag_name = graphene.String()
-    tag_color = graphene.String()
-
 
 class AddTag(graphene.Mutation):
 
@@ -30,11 +28,10 @@ class AddTag(graphene.Mutation):
             cursor = connection.cursor()
             for tag in tag_list:
                 tag_name = tag["tag_name"]
-                tag_color = tag["tag_color"]
                 cursor.execute("select id from tag where name=%s and user_id=%s limit 1", (tag_name, user_id))
                 result = cursor.fetchone()
                 if result is None:
-                    cursor.execute("insert into tag value(null, %s, %s, %s)", (user_id, tag_name, tag_color))
+                    cursor.execute("insert into tag value(null, %s, %s)", (user_id, tag_name))
                     connection.commit()
         finally:
             cursor.close()
