@@ -76,3 +76,19 @@ create table if not exists task
     status tinyint(1) default 0 not null
 );
 
+create table if not exists organization
+(
+	id bigint primary key auto_increment,
+    user_id bigint,
+    name text CHARACTER SET utf8 COLLATE utf8_unicode_ci not null,
+    address text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+    website text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+    country_code varchar(4) default "91",
+    phone varchar(20),
+    twitter text,
+    facebook text,
+    instagram text,
+    linkedin text,
+    image text
+);
+
