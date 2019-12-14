@@ -35,11 +35,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task_detail.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="task_detail.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task/task_detail.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="21" column="108" selection-start-line="21" selection-start-column="108" selection-end-line="21" selection-end-column="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_connection.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/get_connection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+              <folding>
+                <element signature="e#30#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task_model.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task/task_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
+              <folding>
+                <element signature="e#30#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,6 +97,8 @@
         <option value="$PROJECT_DIR$/sensible.py" />
         <option value="$PROJECT_DIR$/task/add_task.py" />
         <option value="$PROJECT_DIR$/task/task_detail.py" />
+        <option value="$PROJECT_DIR$/database/get_connection.py" />
+        <option value="$PROJECT_DIR$/task/task_model.py" />
       </list>
     </option>
   </component>
@@ -484,6 +510,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="108" selection-start-line="21" selection-start-column="108" selection-end-line="21" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/get_connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="e#30#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task/task_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
+          <folding>
+            <element signature="e#30#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
