@@ -22,6 +22,7 @@ from category.delete_category import DeleteCategory
 
 # Tasks related imports
 from task.add_task import AddTask
+from task.task_detail import task_detail_wrapper
 
 app = Flask(__name__)
 api = Api(app=app)
@@ -45,6 +46,7 @@ api.add_resource(DeleteCategory, "/delete_category")
 
 # Tasks
 api.add_resource(AddTask, "/add_task")
+app.add_url_rule("/task_detail", view_func=task_detail_wrapper())
 
 
 if __name__ == "__main__":

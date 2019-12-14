@@ -22,9 +22,9 @@ def get_connection():
 
 def orm_connection():
     if "linux" in platform:
-        engine = create_engine("mysql+pymysql://root:#xoW4TOJnKz7@127.0.0.1/medease")
+        engine = create_engine("mysql+pymysql://root:#xoW4TOJnKz7@127.0.0.1/sensible")
     else:
-        engine = create_engine("mysql+pymysql://root:visweswaran@127.0.0.1/medease")
+        engine = create_engine("mysql+pymysql://root:visweswaran@127.0.0.1/sensible")
     return engine
 
 

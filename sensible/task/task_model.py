@@ -18,3 +18,17 @@ class TaskModel(Base):
     completed_time = sqlalchemy.Column(sqlalchemy.Time)
     opportunity_id = sqlalchemy.Column(sqlalchemy.BIGINT)
     status = sqlalchemy.Column(sqlalchemy.INT, nullable=False, default=0)
+
+
+def get_column_names(fields):
+    column_names = []
+    for field in fields:
+        column_name = ""
+        for character in field:
+            if character.isupper():
+                column_name += "_"
+                column_name += character.lower()
+            else:
+                column_name += character
+        column_names.append(column_name)
+    return column_names
