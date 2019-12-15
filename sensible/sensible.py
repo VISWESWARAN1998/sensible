@@ -28,6 +28,7 @@ from task.update_task import update_task_wrapper
 
 # Organization related imports
 from organization.add_organization import NewOrganization
+from organization.my_organization import MyOrganization
 
 app = Flask(__name__)
 api = Api(app=app)
@@ -57,6 +58,7 @@ app.add_url_rule("/update_task", view_func=update_task_wrapper())
 
 # Organizations
 api.add_resource(NewOrganization, "/new_organization")
+api.add_resource(MyOrganization, "/my_organization")
 
 
 if __name__ == "__main__":

@@ -18,6 +18,7 @@ import org.jsoup.Connection;
 import org.jsoup.Connection.Method;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import sensible.client.CRM;
 
 /**
  *
@@ -28,8 +29,6 @@ public class RestLogin{
     private final String phone;
     private final String password;
     private final JLabel status;
-    
-    private String jwtToken;
     
     /**
      * Constructor for initializing the private variables
@@ -44,6 +43,7 @@ public class RestLogin{
     
     public void login()
     {
+        status.setText("LOGGING IN...");
         try 
         {
             JSONObject json = new JSONObject();
@@ -57,7 +57,14 @@ public class RestLogin{
                     .ignoreContentType(true).post();
             JSONObject object = (JSONObject) new JSONParser().parse(document.text());
             String token = object.get("message").toString();
-            System.out.println(token);
+            SensibleGlobal.token = token;
+            java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                    CRM crm = new CRM();
+                    crm.setLocationRelativeTo(null);
+                    crm.setVisible(true);
+                }
+            });
         } 
         catch (IOException ex) 
         {
@@ -65,6 +72,7 @@ public class RestLogin{
         } catch (ParseException ex) {
             Logger.getLogger(RestLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
+        status.setText("LOGIN");
     }
 
 }

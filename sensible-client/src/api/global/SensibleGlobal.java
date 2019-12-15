@@ -10,7 +10,8 @@ package api.global;
  *
  * @author Visweswaran
  */
-public class SensibleGlobal {
+public class SensibleGlobal 
+{
     public static String URL = "http://127.0.0.1:5000";
     public static String token;
 }
