@@ -5,6 +5,7 @@
  */
 package sensible.client;
 
+import api.auth.RestLogin;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -136,11 +137,15 @@ public class Login extends javax.swing.JFrame {
 
     private void loginLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginLabelMouseClicked
         // TODO add your handling code here:
-        loginLabel.setText("LOGGING IN...");
         String phone = loginPhone.getText().trim();
         String password = loginPassword.getText().trim();
-        loginLabel.setText("LOGIN");
-        System.out.println("Processing");
+        Thread loginThread = new Thread(){
+            public void run()
+            {
+                new RestLogin(phone, password, loginLabel).login();
+            }
+        };
+        loginThread.start();
     }//GEN-LAST:event_loginLabelMouseClicked
 
     /**
